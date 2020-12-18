@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Timestamp from './Timestamp';
 import './ChatEntry.css';
 
-
+//taking in the props from ChatLog
 const ChatEntry = ({sender, body, timeStamp}) => {
-  let senderClass = 'chat-entry local'
+  let senderClass = 'chat-entry local' //Adding styling to sender
   if (sender === 'Estragon') {
     senderClass = 'chat-entry remote'
   }
@@ -15,7 +15,8 @@ const ChatEntry = ({sender, body, timeStamp}) => {
       <h2 className='entry-name'>{sender}</h2>
       <section className="entry-bubble">
         <p>{body}</p>
-        <p className='entry-time'><Timestamp time={timeStamp} /></p>
+        {/* calling Timestamp function? */}
+        <p className='entry-time'><Timestamp time={timeStamp} /></p> 
       </section>
     </div>
   )
