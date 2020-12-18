@@ -13,7 +13,7 @@ const App = () => {
       </header>
       <main>
         {/* sending messages.json data to ChatLog props*/}
-        <ChatLog Messages={messages}/>
+        <ChatLog chatMessages={messages}/>
       </main>
     </div>
   );

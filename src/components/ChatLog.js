@@ -6,7 +6,7 @@ const ChatLog = ((props) => {
   // console.log(props)
   
   //Returning new array of messages, which will include styling and methods (call to Timestamp from ChatEntry) from ChatEntry?
-  const chatComponents = props.Messages.map((message, i) => {
+  const chatComponents = props.chatMessages.map((message, i) => {
       
     return(
       <ChatEntry
