@@ -1,8 +1,16 @@
 import React from 'react';
+import Timestamp from './Timestamp';
+import './ChatEntry.css';
 
-const ChatEntry = () => {
+const ChatEntry = (props) => {
     return (
-        <h3>ChatEntry</h3>
+        <article className = "chat-entry local">
+            <h2 className = "entry-name"> {props.sender} </h2>
+            <p className = "entry-bubble">{props.body} <br/>
+                <Timestamp time = {props.timeStamp} />
+            </p>
+            
+        </article>
     );
 };
 
