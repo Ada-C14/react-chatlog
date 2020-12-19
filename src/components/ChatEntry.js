@@ -5,3 +5,5 @@ const ChatEntry = () => {
         <h3>ChatEntry</h3>
     );
 };
+
+export default ChatEntry;
