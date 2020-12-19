@@ -8,13 +8,12 @@ const App = () => {
 
   // assume that all of first sender's messages are compiled into a single bubble
   // before second sender sends a message
-  const firstSender = chatMessages[0].sender;
-  const secondSender = chatMessages[1].sender;
+  const senders = chatMessages.length < 2 ? 'Anonymous and Anonymous' : `${chatMessages[0].sender} and ${chatMessages[1].sender}`;
 
   return (
     <div id="App">
       <header>
-        <h1>Chat between {firstSender} and {secondSender} </h1>
+        <h1>Chat between {senders} </h1>
       </header>
       <main>
         <ChatLog chatMessages = {chatMessages}/>
