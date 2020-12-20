@@ -7,7 +7,6 @@ import ChatLog from './components/ChatLog';
 const App = () => {
   console.log(chatMessages);
 
-  const singleChat = chatMessages[0];
 
   return (
     <div id="App">
@@ -15,7 +14,6 @@ const App = () => {
         <h1>Secrets between {chatMessages[0].sender} and {chatMessages[1].sender} </h1>
       </header>
       <main>
-        <ChatEntry sender={singleChat.sender} body={singleChat.body} timeStamp={singleChat.timeStamp} />
         <ChatLog chatMessages={chatMessages} />
       </main>
     </div>
