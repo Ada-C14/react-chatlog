@@ -21,7 +21,7 @@ const ChatLog = (props) => {
 };
 
 ChatLog.propTypes = {
-
+  allChats: PropTypes.array.isRequired
 };
 
 export default ChatLog;
