@@ -4,24 +4,28 @@ import './ChatLog.css';
 import ChatEntry from './ChatEntry';
 
 const ChatLog = (props) => {
-  return(
-    <ul className='chat-log'>
-      {props.allChats.map((chat, index) => {
-        return(
-          <li key={chat.timeStamp}>
-            <ChatEntry 
-              sender={chat.sender}
-              body={chat.body}
-              timeStamp={chat.timeStamp} />
-          </li>
-        );
-      })}
-    </ul>
-  );
+  if (props.chatMessages.length > 0) {
+    return(
+      <ul className='chat-log'>
+        {props.chatMessages.map((chat, index) => {
+            return(
+              <li key={chat.timeStamp}>
+                <ChatEntry 
+                  sender={chat.sender}
+                  body={chat.body}
+                  timeStamp={chat.timeStamp} />
+              </li>
+            );
+        })}
+      </ul>
+    );
+  } else {
+    return null;
+  }
 };
 
 ChatLog.propTypes = {
-  allChats: PropTypes.array.isRequired
+  chatMessages: PropTypes.array.isRequired
 };
 
 export default ChatLog;
