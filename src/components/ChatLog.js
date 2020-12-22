@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './ChatLog.css';
-import ChatEntry from './components/ChatEntry';
+import ChatEntry from './ChatEntry';
 
-const ChatLog = (allChats) => {
+const ChatLog = (props) => {
   return(
     <ul className='chat-log'>
-      {allChats.map((chat, index) => {
+      {props.allChats.map((chat, index) => {
         return(
           <li key={chat.timeStamp}>
             <ChatEntry 
