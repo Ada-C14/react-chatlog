@@ -5,9 +5,9 @@ import './ChatEntry.css';
 
 
 const ChatEntry = ({sender, body, timeStamp}) => {
-  let senderClass = 'chat-entry local'
+  let senderClass = 'chat-entry local';
   if (sender === 'Estragon') {
-    senderClass = 'chat-entry remote'
+    senderClass = 'chat-entry remote';
   }
 
   return (
