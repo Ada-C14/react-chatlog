@@ -13,7 +13,8 @@ const ChatLog = (props) => {
                 <ChatEntry 
                   sender={chat.sender}
                   body={chat.body}
-                  timeStamp={chat.timeStamp} />
+                  timeStamp={chat.timeStamp}
+                  remoteSender={props.remoteSender} />
               </li>
             );
         })}
@@ -25,7 +26,8 @@ const ChatLog = (props) => {
 };
 
 ChatLog.propTypes = {
-  chatMessages: PropTypes.array.isRequired
+  chatMessages: PropTypes.array.isRequired,
+  remoteSender: PropTypes.string.isRequired
 };
 
 export default ChatLog;

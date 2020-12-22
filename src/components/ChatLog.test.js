@@ -8,7 +8,7 @@ const LOG = [
   {
     'sender': 'Vladimir',
     'body': 'why are you arguing with me',
-    'timeStamp': '2018-05-29T22:49:06+00:00'
+    'timeStamp': '2018-05-29T22:49:06+00:00',
   },
   {
     'sender': 'Estragon',
@@ -32,10 +32,11 @@ const LOG = [
   }
 ];
 
+const remoteSender = 'Estragon';
+
 describe('ChatLog', () => {
   beforeEach(() => {
-    
-    render(<ChatLog chatMessages={LOG} />);  
+    render(<ChatLog chatMessages={LOG} remoteSender={remoteSender} />);  
   });
 
   test('renders without crashing and shows all the names', () => {
@@ -59,7 +60,7 @@ describe('ChatLog', () => {
   });
 
   test('renders an empty list without crashing', () => {
-    const element = render(<ChatLog chatMessages={[]} />);  
+    const element = render(<ChatLog chatMessages={[]} remoteSender='' />);  
     expect(element).not.toBeNull();
   })
 });

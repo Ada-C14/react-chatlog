@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import Timestamp from './Timestamp';
 import './ChatEntry.css';
 
-
-const ChatEntry = ({sender, body, timeStamp}) => {
+const ChatEntry = ({sender, body, timeStamp, remoteSender}) => {
   let senderClass = 'chat-entry local';
-  if (sender === 'Estragon') {
+  if (sender === remoteSender) {
     senderClass = 'chat-entry remote';
   }
 
@@ -25,6 +24,7 @@ ChatEntry.propTypes = {
   sender: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   timeStamp: PropTypes.string.isRequired,
+  remoteSender: PropTypes.string.isRequired
 }
 
 export default ChatEntry;
