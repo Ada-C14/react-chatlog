@@ -4,6 +4,7 @@ import Timestamp from './Timestamp';
 import './ChatEntry.css';
 
 
+
 const ChatEntry = ({sender, body, timeStamp}) => {
   let senderClass = 'chat-entry local'
   if (sender === 'Estragon') {
