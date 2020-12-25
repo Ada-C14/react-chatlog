@@ -3,7 +3,7 @@ In this project you will use core React concepts to build a chat messenger-style
 
 ## Learning Goals
 In this project you will learn to:
-- Build React components which recieve data through props
+- Build React components which receive data through props
 - Build React container components which pass information to their subcomponents
 
 ## Project Outline
