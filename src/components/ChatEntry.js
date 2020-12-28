@@ -4,18 +4,18 @@ import Timestamp from './Timestamp';
 import './ChatEntry.css';
 
 
-const ChatEntry = ({sender, body, timeStamp}) => {
+const ChatEntry = (props) => {
   let senderClass = 'chat-entry local'
-  if (sender === 'Estragon') {
+  if (props.sender === 'Estragon') {
     senderClass = 'chat-entry remote'
   }
 
   return (
     <div className={senderClass}>
-      <h2 className='entry-name'>{sender}</h2>
+      <h2 className='entry-name'>{props.sender}</h2>
       <section className="entry-bubble">
-        <p>{body}</p>
-        <p className='entry-time'><Timestamp time={timeStamp} /></p>
+        <p>{props.body}</p>
+        <p className='entry-time'><Timestamp time={props.timeStamp} /></p>
       </section>
     </div>
   )
