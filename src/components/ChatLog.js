@@ -4,7 +4,7 @@ import ChatEntry from './ChatEntry'
 import './ChatLog.css';
 
 const ChatLog = (props) => {
-  if (props.chatEntries === []) {
+  if (props.chatEntries.length === 0) {
     return (
       <div className='chat-log'>
         No Messages

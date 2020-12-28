@@ -13,7 +13,7 @@ const App = () => {
       return senders[0]
     } else if (senders.length === 2) {
       return `${senders[0]} and ${senders[1]}`
-    } else {
+    } else if (senders.length > 1){
       let string = ''
       for(let i = 0; i < senders.length - 1; i += 1) {
         string += `${senders[i]}, `
