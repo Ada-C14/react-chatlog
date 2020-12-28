@@ -4,12 +4,13 @@ import chatMessages from './data/messages.json';
 import ChatLog from './components/ChatLog';
 
 const App = () => {
-  // console.log(chatMessages);
+  const user1 = chatMessages[0].sender;
+  const user2 = chatMessages[1].sender;
 
   return (
     <div id="App">
       <header>
-        <h1>Application title</h1>
+        <h1>Chat between {user1} and {user2}</h1>
       </header>
       <main>
         <ChatLog events={chatMessages}/>
