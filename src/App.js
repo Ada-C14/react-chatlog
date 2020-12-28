@@ -12,7 +12,7 @@ const App = () => {
         <h1>Bots?!</h1>
       </header>
       <main>
-        < ChatLog messages={chatMessages} />
+        < ChatLog chatMessages={chatMessages} />
       </main>
     </div>
   );
