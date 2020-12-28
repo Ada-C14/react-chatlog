@@ -1,6 +1,7 @@
 import React from 'react';
 import ChatEntry from './ChatEntry';
 import './ChatLog.css';
+import PropTypes from 'prop-types';
 
 const ChatLog = (props) => {
   const chatLogComponents = props.events.map ((message, i) => {
@@ -16,6 +17,12 @@ const ChatLog = (props) => {
       {chatLogComponents}
     </ul>
   );
+};
+
+ChatLog.propTypes = {
+  sender: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  timeStamp: PropTypes.string.isRequired,
 };
 
 export default ChatLog;
