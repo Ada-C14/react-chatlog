@@ -4,14 +4,14 @@ import ChatEntry from './ChatEntry'
 import './ChatLog.css';
 
 const ChatLog = (props) => {
-  if (props.chatEntries.length === 0) {
+  if (props.chatMessages.length === 0) {
     return (
       <div className='chat-log'>
         No Messages
       </div>
     );
   } else {
-    const chatLogEntries = props.chatEntries.map((entry) => {
+    const chatLogEntries = props.chatMessages.map((entry) => {
       return (
         <ChatEntry 
         sender={entry.sender} 
@@ -30,7 +30,7 @@ const ChatLog = (props) => {
 };
 
 ChatLog.propTypes = {
-  chatEntries: PropTypes.arrayOf(PropTypes.object)
+  chatMessages: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default ChatLog;

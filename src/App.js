@@ -29,7 +29,7 @@ const App = () => {
         <h1>Chat between {printSenders(senders)}</h1>
       </header>
       <main>
-        <ChatLog chatEntries={chatMessages} />
+        <ChatLog chatMessages={chatMessages} />
       </main>
     </div>
   );
