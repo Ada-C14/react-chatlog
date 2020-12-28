@@ -13,7 +13,7 @@ const App = () => {
         <h1>Chat between {user1} and {user2}</h1>
       </header>
       <main>
-        <ChatLog events={chatMessages}/>
+        <ChatLog chatMessages={chatMessages}/>
       </main>
     </div>
   );

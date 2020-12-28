@@ -4,13 +4,18 @@ import './ChatLog.css';
 import PropTypes from 'prop-types';
 
 const ChatLog = (props) => {
-  const chatLogComponents = props.events.map ((message, i) => {
-    return(
-      <li key={i}>
-        <ChatEntry sender={message.sender} body={message.body} timeStamp={message.timeStamp}/>
-      </li>
-    );
-  });
+  let chatLogComponents = null;
+  if (props.chatMessages && props.chatMessages.length > 0) {
+    chatLogComponents = props.chatMessages.map ((message, i) => {
+      return(
+        <li key={i}>
+          <ChatEntry sender={message.sender} body={message.body} timeStamp={message.timeStamp}/>
+        </li>
+      );
+    });
+  } else {
+    chatLogComponents = () => {return(<li></li>)};
+  }
 
   return(
     <ul className='chat-log'>
